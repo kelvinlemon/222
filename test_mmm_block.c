@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
   bsize = BBASE;
   printf("\nblocksize, ijk, kij, jki");
   for (i = 0; i < BITERS; i++) {
-      printf("\n%ld hi", bsize);
+      printf("\n%ld, ", bsize);
       for (j=0;j<OPTIONS;j++){
           if (j !=0) printf(", ");
           printf("%ld", (long int)((double)
