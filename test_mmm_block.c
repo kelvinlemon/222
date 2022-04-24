@@ -87,18 +87,18 @@ int main(int argc, char *argv[])
       mmm_iijjkk_blocked_jki(a0,b0,c0,bsize);
       clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
       time_stamp[OPTION][i] = diff(time1,time2);
-      printf("\niter = %d bsize = %d", i, bsize);
+      printf("\niter = %ld bsize = %ld", i, bsize);
       bsize *= 2;
   }
 
 
   bsize = BBASE;
-  printf("\nblocksize, ijk, kij, jki")
+  printf("\nblocksize, ijk, kij, jki");
   for (i = 0; i < BITERS; i++) {
-      printf("\n%ld", bsize);
+      printf("\n%ld hi", bsize);
       for (j=0;j<OPTIONS;j++){
           if (j !=0) printf(", ");
-          printf("ld", (long int)((double)
+          printf("%ld", (long int)((double)
                        (GIG * time_stamp[j][i].tv_sec + time_stamp[j][i].tv_nsec)));
       }
 
